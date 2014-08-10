@@ -9,16 +9,19 @@ app.config['DEBUG'] = os.environ.get('DEBUG', False)
 def hello():
   return 'Hello World!'
 
-@app.route('/sms')
-def sendSMS():
-  sms.send("919884364132")
+@app.route('/send-sms', methods=['GET'])
+def send_sms():
+  text = request.args.get('Text')
+  to = request.args.get('To')
+  sms.send(to, text)
   return 'Message sent!'
 
-@app.route("/receive-sms", methods=['POST'])
+@app.route("/receive-sms", methods=['GET'])
 def receive_sms():
   text = request.args.get('Text')
   _from = request.args.get('From')
-  return 'Text received: %s - From: %s' % (text, _from)
+  sms.send("919884364132", 'Text received: %s - From: %s' % (text, _from))
+  return 'Message received!'
 
 if __name__ == '__main__':
   app.run()
