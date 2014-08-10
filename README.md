@@ -1,6 +1,6 @@
 # Custero
 
-Custero is simple customer support system through SMS
+Custero is simple customer support service through SMS
 
 ### Install dependencies
 
@@ -27,4 +27,4 @@ To compile and watch for sass file changes
 
     export PYTHONPATH=$(pwd)/server/
     mongod
-    python server.py
+    foreman start
