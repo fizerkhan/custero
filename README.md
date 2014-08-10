@@ -23,6 +23,13 @@ To compile and watch for sass file changes
 
     gulp watch
 
+### Export configurations in development
+
+    export PLIVO_AUTH_ID=<copy_from_pilvo>
+    export PLIVO_AUTH_TOKEN=<copy_from_pilvo>
+    export PLIVO_NUMBER=<copy_from_pilvo>
+    export TEST_NUMBER=<test_mobile_number>
+
 ### Run server
 
     export PYTHONPATH=$(pwd)/server/
