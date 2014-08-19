@@ -25,5 +25,5 @@ Following steps are only needed one time
 ### Deploy to Heroku
 
 1. Create an heroku application
-2. Add an heroku git repo. **git remote add heroku <heroku_git_url>**
+2. Add an heroku git repo. **git remote add heroku heroku_git_url**
 3. Push it to heroku. **git push heroku master**
