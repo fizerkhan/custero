@@ -10,7 +10,7 @@ app.config['DEBUG'] = os.environ.get('DEBUG', False)
 
 @app.route('/')
 def hello():
-  return 'Hello World!'
+  return 'Hi, This is plivo boilerplate!'
 
 @app.route('/send-sms', methods=['GET'])
 def send_sms():

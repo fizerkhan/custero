@@ -1,27 +1,14 @@
-# Custero
+# Flask-Plivo
 
-Custero is simple customer support service through SMS
+Boilerplate project template for [plivo](https://www.plivo.com/) with a Flask-based application.
 
 ### Install dependencies
 
 Following steps are only needed one time
 
-  1. npm install
-  2. bower install
-  3. virtualenv venv
-  4. source venv/bin/activate
-  5. pip install -r requirements.pip
-
-
-### Run gulp to watch and compile Sass
-
-To compile a sass
-
-    gulp
-
-To compile and watch for sass file changes
-
-    gulp watch
+    virtualenv venv
+    source venv/bin/activate
+    pip install -r requirements.txt
 
 ### Export configurations in development
 
@@ -32,6 +19,11 @@ To compile and watch for sass file changes
 
 ### Run server
 
-    export PYTHONPATH=$(pwd)/server/
-    mongod
+    source venv/bin/activate
     foreman start
+
+### Deploy to Heroku
+
+1. Create an heroku application
+2. Add an heroku git repo. **git remote add heroku <heroku_git_url>**
+3. Push it to heroku. **git push heroku master**
